@@ -1,5 +1,14 @@
+/* variables  */
+:root {
+  --grey-clr: rgb(75, 75, 75);
+  --green-clr: rgb(65, 216, 227);
+}
+
+
+/* styles */
 * {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -7,6 +16,7 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  font-size: 62.5%;
 }
 
 h1,
@@ -14,10 +24,64 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul,
+li {
   margin: 0;
+  padding:0;
 }
 
 p {
   margin: 0;
+  padding: 0;
 }
+
+a { 
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* header styles  */
+#logo {
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--grey-clr);
+  background-color:var(--green-clr);
+}
+
+nav {
+  background-color: var(--grey-clr);
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  
+}
+
+nav a {
+  color: var(--green-clr);
+  margin: 0 0.5rem;
+  border-bottom: 0.3rem solid var(--green-clr);
+}
+
+nav a:nth-child(4) {
+  align-self: center;
+}
+
+.hero-banner {
+  background-image: url("../images/02-hero-bg.jpg");
+  height: 10rem;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* align-items: center; */
+}
+
+
