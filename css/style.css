@@ -2,6 +2,8 @@
 :root {
   --grey-clr: #354f52;
   --green-clr: #84a98c;
+  --bckrnd-clr: #cad2c5;
+  --card-brdr: #52796f;
 }
 /* old colors : 
 --grey-clr: rgb(75, 75, 75);
@@ -33,7 +35,10 @@ h4,
 h5,
 h6,
 ul,
-li {
+li,
+img,
+figure,
+figcaption {
   margin: 0;
   padding:0;
 }
@@ -72,16 +77,16 @@ nav {
   
 }
 
-#about, #work, #contact {
-  display: inline;
-  text-align: center;
-  width: 100%;
-}
-
 nav a {
   color: var(--green-clr);
   margin: 0 0.5rem;
   border-bottom: 0.3rem solid var(--green-clr);
+}
+
+#about, #work, #contact {
+  display: inline;
+  text-align: center;
+  width: 100%;
 }
 
 #resume {
@@ -119,3 +124,88 @@ nav a {
   line-height: 1.1;
   text-align: center;
 }
+
+/* main styles  */
+.page-wrapper {
+  padding: 2rem 2.5rem;
+}
+
+/* about - section styles  */
+.page-section {
+  background-color: var(--bckrnd-clr);
+  color: var(--grey-clr);
+  margin-bottom: 2rem;
+}
+
+.page-section h2 {
+  font-size: 2.2rem ;
+  font-weight: 700;
+  border-bottom: 0.4rem solid var(--grey-clr);
+  margin-bottom: 1.5rem;
+}
+
+.page-section p {
+  text-align:start;
+  font-size: 1.6rem;
+}
+
+/* work - section styles  */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5";
+  
+}
+
+#card1 {
+  grid-area: card1;
+}
+#card2 {
+  grid-area: card2;
+}
+#card3 {
+  grid-area: card3;
+}
+#card4 {
+  grid-area: card4;
+}
+#card5 {
+  grid-area: card5;
+}
+
+.card {
+  position: relative;
+  border: 0.5rem solid var(--card-brdr);
+  margin-bottom: 2rem;
+}
+
+figure {
+  margin: 0;
+}
+.card img {
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  
+}
+
+.card figcaption {
+  background-color: var(--card-brdr);
+  color: var(--grey-clr);
+  font-size: 2.2rem;
+  padding:0;
+  margin:0;
+  position: absolute;
+  bottom: 2rem;
+  width:40%;  
+  
+}
+
