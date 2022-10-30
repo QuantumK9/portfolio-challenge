@@ -1,9 +1,12 @@
 /* variables  */
 :root {
-  --grey-clr: rgb(75, 75, 75);
-  --green-clr: rgb(65, 216, 227);
+  --grey-clr: #264653;
+  --green-clr: #2a9d8f;
 }
-
+/* old colors : 
+--grey-clr: rgb(75, 75, 75);
+--green-clr: rgb(65, 216, 227);
+*/
 
 /* styles */
 * {
