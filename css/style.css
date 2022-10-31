@@ -1,13 +1,15 @@
 /* variables  */
 :root {
-  --grey-clr: #354f52;
-  --green-clr: #84a98c;
-  --bckrnd-clr: #cad2c5;
-  --card-brdr: #52796f;
+  --grey-clr: #323540;
+  --green-clr: #92c9ca;
+  --blueish: #1e4063;
+  --card-brdr: #92c9ca;
 }
 /* old colors : 
---grey-clr: rgb(75, 75, 75);
---green-clr: rgb(65, 216, 227);
+--grey-clr: #354f52;
+--green-clr: #84a98c;
+--bckrnd-clr: #cad2c5;
+--card-brdr: #52796f;
 */
 
 /* styles */
@@ -69,10 +71,6 @@ nav {
   background-color: var(--grey-clr);
   font-size: 2.4rem;
   text-align: center;
-  /* display: flex;  
-  justify-content: space-between; 
-  align-items: center;  
-  flex-wrap: wrap;   */
   padding: 1.4rem 2rem;
   
 }
@@ -83,13 +81,13 @@ nav a {
   border-bottom: 0.3rem solid var(--green-clr);
 }
 
-#about, #work, #contact {
+#about-link, #work-link, #contact-link {
   display: inline;
   text-align: center;
   width: 100%;
 }
 
-#resume {
+#resume-link {
   display: block;
   margin: 0 auto;
   width: 10rem;
@@ -132,15 +130,15 @@ nav a {
 
 /* about - section styles  */
 .page-section {
-  background-color: var(--bckrnd-clr);
-  color: var(--grey-clr);
+  /* background-color: var(--bckrnd-clr); */
+  color: var(--blueish);
   margin-bottom: 2rem;
 }
 
 .page-section h2 {
   font-size: 2.2rem ;
   font-weight: 700;
-  border-bottom: 0.4rem solid var(--grey-clr);
+  border-bottom: 0.4rem solid var(--blueish);
   margin-bottom: 1.5rem;
 }
 
@@ -212,10 +210,10 @@ figure {
 /* contact - section styles  */
 .contact li a {
   text-decoration: none;
-  color: var(--grey-clr);
+  color: var(--blueish);
   font-size: 1.8rem;
   font-weight: 700;
-  border-bottom: 0.3rem solid var(--grey-clr);
+  border-bottom: 0.3rem solid var(--blueish);
   
 }
 
@@ -264,15 +262,15 @@ figure {
       margin-top: 20px;  
     }
   
-    #about,
-    #work,
-    #contact {
+    #about-link,
+    #work-link,
+    #contact-link {
       display: inline;
       /* text-align: center; */
       
     }
   
-    #resume {
+    #resume-link {
       display: inline;
       margin: 0 auto;
       width: 10rem;
@@ -318,10 +316,62 @@ figure {
   margin: 0 auto;
 }
 
+
+.about-me {
+  display: grid; 
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 150px;
+  grid-template-areas: 
+    "h2 about";
+  grid-column-gap: 20px;
+  align-items: center;
+}
+
+.about-me > h2 {
+  grid-area: h2;
+  border-bottom: none;
+  padding-right: 10px;
+  border-right: 0.4rem solid var(--blueish);
+  font-size: 3rem;
+  height: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align:end
+  
+}
+.about-me > p {
+  grid-area: about;
+  
+}
+
+
+#work {
+  display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 700px;
+    grid-template-areas:
+      "h2 cards";
+    grid-column-gap: 20px;
+    align-items: center;
+}
+
+#work > h2 {
+  grid-area: h2;
+  border-bottom: none;
+  padding-right: 10px;
+  border-right: 0.4rem solid var(--blueish);
+  font-size: 3rem;
+  height: 700px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
 .card-container {
+    grid-area: cards;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 33.333% ) ;
+    grid-template-rows: 300px 200px 200px ;
     column-gap: 2rem;
     grid-template-areas:
       "card1 card1"
@@ -354,12 +404,15 @@ figure {
     position: relative;
     border: 0.5rem solid var(--card-brdr);
     margin-bottom: 2rem;
+    overflow: hidden;
   }
 
-
+  
   .card img {
     width: 100%;
+    height: auto;
     object-fit: cover;
+    overflow:hidden;
     padding: 0;
     margin: 0;
     vertical-align: top;
@@ -375,6 +428,51 @@ figure {
     position: absolute;
     bottom: 2rem;
     width: 40%;
+    
 
   }
+
+
+/* contact - section styles - desktop */
+.contact li a {
+  text-decoration: none;
+  color: var(--blueish);
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-bottom: 0.3rem solid var(--blueish);
+
+}
+
+.contact ul {
+  text-align: start;
+}
+#contact {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 150px;
+  grid-template-areas:
+    "contact-h2 contact-links";
+  grid-column-gap: 20px;
+  align-items: center;
+}
+
+#contact >h2 {
+  grid-area: contact-h2;
+  border-bottom: none;
+  padding-right: 10px;
+  border-right: 0.4rem solid var(--blueish);
+  font-size: 3rem;
+  height: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: end;
+}
+
+.contact-links {
+  grid-area: contact-links;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 }
