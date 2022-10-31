@@ -225,67 +225,156 @@ figure {
 
 /* tablets and bigger screen - styles */
 @media screen and (min-width: 768px) {
-  .card-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, 33.333% ) ;
-      column-gap: 2rem;
-      grid-template-areas:
-        "card1 card1"
-        "card2 card3"
-        "card4 card5";
   
-    }
-  
-    #card1 {
-      grid-area: card1;
-    }
-  
-    #card2 {
-      grid-area: card2;
-    }
-  
-    #card3 {
-      grid-area: card3;
-    }
-  
-    #card4 {
-      grid-area: card4;
-    }
-  
-    #card5 {
-      grid-area: card5;
-    }
+  /* header styles for desktop */
+  header {
+    position: relative;
+  }
 
-    .card {
-      position: relative;
-      border: 0.5rem solid var(--card-brdr);
-      margin-bottom: 2rem;
-    }
-/* 
-    .card:nth-child(even) {
-      margin-right:2rem;
-      /* border: 2px solid yellow; */
-    } */
-    
-    .card img {
-      width: 100%;
-      object-fit: cover;
-      padding: 0;
-      margin: 0;
-      vertical-align: top;
-
-    }
-
-    .card figcaption {
-      background-color: var(--card-brdr);
-      color: var(--grey-clr);
-      font-size: 2.2rem;
-      padding: 0;
-      margin: 0;
+  #logo {
+      display: inline;
       position: absolute;
-      bottom: 2rem;
-      width: 40%;
-
+      top: 1.25rem;
+      left: 0;
+      text-align: center;
+      line-height: 1.0;
+      font-size: 3.5rem;
+      padding-left: 2rem;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      color: var(--grey-clr);
+      background-color: var(--green-clr);
     }
+  
+    nav {
+      background-color: var(--grey-clr);
+      height:7rem;
+      line-height: 1.0;
+      font-size: 2.0rem;
+      text-align: right;
+      padding-top: 25px;
+  
+    }
+  
+    nav a {
+      color: var(--green-clr);
+      border-bottom: 0.3rem solid var(--green-clr);
+      vertical-align: text;
+      margin-top: 20px;  
+    }
+  
+    #about,
+    #work,
+    #contact {
+      display: inline;
+      /* text-align: center; */
+      
+    }
+  
+    #resume {
+      display: inline;
+      margin: 0 auto;
+      width: 10rem;
+    }
+
+    /* hero styles for desktop  */
+
+
+.hero-banner {
+  position: relative;
+  background-image: url("../images/02-hero-bg.jpg");
+  height: 7rem;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.hero-title {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  bottom: auto;
+  left:auto;
+
+  z-index: 10;
+  width:fit-content;
+  background-color: var(--green-clr);
+  color: var(--grey-clr);
+  padding: 0.3rem 0.5rem;
+  margin-right: 2rem;
+}
+
+.hero-title h2 {
+  line-height: 1.0;
+  text-align: center;
+  font-size: 2.4rem;
+}
+  
+.page-wrapper {
+  max-width: 102.4rem;
+  margin: 0 auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 33.333% ) ;
+    column-gap: 2rem;
+    grid-template-areas:
+      "card1 card1"
+      "card2 card3"
+      "card4 card5";
+
+  }
+
+  #card1 {
+    grid-area: card1;
+  }
+
+  #card2 {
+    grid-area: card2;
+  }
+
+  #card3 {
+    grid-area: card3;
+  }
+
+  #card4 {
+    grid-area: card4;
+  }
+
+  #card5 {
+    grid-area: card5;
+  }
+
+  .card {
+    position: relative;
+    border: 0.5rem solid var(--card-brdr);
+    margin-bottom: 2rem;
+  }
+
+
+  .card img {
+    width: 100%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+
+  }
+
+  .card figcaption {
+    background-color: var(--card-brdr);
+    color: var(--grey-clr);
+    font-size: 2.2rem;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 2rem;
+    width: 40%;
+
+  }
 }
