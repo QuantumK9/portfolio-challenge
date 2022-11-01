@@ -8,13 +8,13 @@ For this challenge, a responsive mobile-first website had to be created, using h
 
 For this website CSS Flexbox and CSS Grid were used, along with other CSS style rules, along with CSS Variables (CSS Custom properties).
 
----
+
 ## Installation (optional)
 
 If someone wants to, they can download the code from the following repository: 
 [Github Repository](https://github.com/QuantumK9/portfolio-challenge)
 
----
+
 ## Usage
 
 The final project can me seen in the following link:
@@ -22,7 +22,7 @@ The final project can me seen in the following link:
 [Iraklis K - Web Developer Portfolio](https://quantumk9.github.io/portfolio-challenge/)
 
 
----
+
 
 ## Screenshots
 ### Mobile: 
@@ -32,12 +32,12 @@ The final project can me seen in the following link:
 ### Desktop: 
 ![Screenshot](/images/desktop-screenshot.jpg)
 
----
+
 ## Credits
 
 This challenge was completed by Iraklis Koufopoulos
 
----
+
 ## License 
 
 MIT License
