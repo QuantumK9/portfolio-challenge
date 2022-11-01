@@ -81,6 +81,12 @@ nav a {
   border-bottom: 0.3rem solid var(--green-clr);
 }
 
+nav a:hover {
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
 #about-link, #work-link, #contact-link {
   display: inline;
   text-align: center;
@@ -183,6 +189,12 @@ nav a {
   margin-bottom: 2rem;
 }
 
+.card:hover {
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
 figure {
   margin: 0;
 }
@@ -215,6 +227,12 @@ figure {
   font-weight: 700;
   border-bottom: 0.3rem solid var(--blueish);
   
+}
+
+.contact li a:hover {
+  opacity: 0.7;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .contact ul {
